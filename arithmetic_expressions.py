@@ -218,7 +218,9 @@ class PolyExpr(Statement):
                         if new_coeff[i+j] == 0:
                             new_coeff[i+j] = mult
                         else:
-                            new_coeff[i+j] = AddExpr(Litteral())
+                            new_coeff[i+j] = AddExpr(Litteral(new_coeff[i+j]), mult)
+                    else:
+                        new_coeff[i+j] = AddExpr(new_coeff[i+j], mult)
 
 
 

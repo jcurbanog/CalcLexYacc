@@ -1,5 +1,8 @@
 from ply import lex
 
+class SyntaxErrorFound(Exception):
+    pass
+
 tokens = ('NUMBER', 'PLUS', 'MINUS', 'TIMES', 'SLASH', 'LP', 'RP', 'LBP', 'RBP', 'VAR', 'EQ', 'COMMA', 'DOT', 'POW', 'SIN', 'POLY', 'APP', 'DER', 'POLYTIMES', 'PI', 'E')
 
 t_NUMBER = '(([1-9][0-9]*)|0)(\.[0-9]+)?'
@@ -24,6 +27,12 @@ t_DER = 'Derivate'
 t_POLYTIMES = 'Times'
 t_PI = 'Pi'
 t_E = 'E'
+
+def t_error(t):
+    if t:
+        raise SyntaxErrorFound(f"Syntax error at token '{t.value}' at line {t.lineno}, position {t.lexpos}")
+    else:
+        raise SyntaxErrorFound("Syntax error at EOF")
 
 lexer = lex.lex()
 

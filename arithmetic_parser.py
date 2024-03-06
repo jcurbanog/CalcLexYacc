@@ -1,10 +1,7 @@
 from arithmetic_expressions import (AddExpr, Assignment, DivExpr, Euler, Litteral, MulExpr, OppExpr, Pi, PolyExpr, PowExpr, SinExpr, Statement, SubExpr, Var, VariableNotFound, dic)
-from arithmetic_lexer import tokens
+from arithmetic_lexer import SyntaxErrorFound, tokens
 from ply import yacc
 import numpy as np
-
-class SyntaxErrorFound(Exception):
-    pass
 
 precedence = (
     ('left', 'EQ'),
