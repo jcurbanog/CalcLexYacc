@@ -1,4 +1,4 @@
-# Calculator in Lex y Yacc
+# Calculator in Lex and Yacc
 
 This repository shows an implementation of some of the most common mathematical expressions using an specific syntax. This is possible thanks to the `ply` library that includes a Lexer and Parser implemented in Python.
 This file shows examples of what you could expect to calculate.
