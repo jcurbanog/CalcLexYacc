@@ -10,7 +10,7 @@ To quit the program, type `quit`.
 
 ## Arithmetic
 
-You can perform arithmetic operations such as addition `+`, substraction `-`, multiplication, `*`, division `/`, power `^`, use parenthesis to specify priority and use the minus `-` as an unitary operator.
+You can perform arithmetic operations such as addition `+`, substraction `-`, multiplication `*`, division `/`, power `^`, use parenthesis to specify priority and use the minus `-` as an unitary operator.
 
 ```
 >> 1+3
